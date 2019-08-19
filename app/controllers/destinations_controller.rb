@@ -1,7 +1,12 @@
 class DestinationsController < ApplicationController
 
   def index
-    @destinations = Destination.all
+    searched_city = params[:city]
+    if searched_city
+      @destinations = Destination.city(searched_city)
+    else
+      @destinations = Destination.all
+    end
     json_response(@destinations)
   end
 
@@ -31,6 +36,11 @@ class DestinationsController < ApplicationController
         message: "This quote has been destroyed successfully!"
       }
     end
+  end
+
+  def most_reviewed
+    @destinations = Destination.review_count
+    json_response(@destinations)
   end
 
   private

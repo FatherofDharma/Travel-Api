@@ -3,8 +3,11 @@ class Destination < ApplicationRecord
   validates :city, presence: true
   validates :country, presence: true
 
-  scope :city, -> (city) { where("city ILIKE ?", "%#{city}%")}
+  # scope :city, -> (city) { where("city ILIKE ?", "%#{city}%")}
+  scope :city, -> (city) { where(city: city)}
+
   scope :country, -> (country) { where("country ILIKE ?", "%#{country}%")}
+
   scope :review_count, -> {
     select("destinations.id, destinations.city, destinations.country, count(reviews.id) as reviews_count")
     .joins(:reviews)
