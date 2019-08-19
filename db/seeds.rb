@@ -9,6 +9,8 @@
 class Seed
 
   def self.begin
+    Destination.destroy_all
+    Review.destroy_all
     seed = Seed.new
     seed.generate_destinations
   end
@@ -20,10 +22,16 @@ class Seed
         country: Faker::Movies::LordOfTheRings.location
       )
       puts "Destination #{i}: City is #{destination.city} and country is #{destination.country}."
+      rand(3..7).times do |x|
+        review = destination.reviews.create!(
+          user_name: Faker::Movies::LordOfTheRings.character,
+          rating: rand(1..5),
+          content: Faker::Movies::Hobbit.quote
+        )
+        puts "Review #{x}: User is #{review.user_name}, Rating is #{review.rating}, and the content is #{review.content}."
+      end
     end
   end
 end
 
 Seed.begin
-
-# Faker::Movies::Hobbit.quote

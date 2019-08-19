@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  belongs_to :destination, dependent: :destroy
+  belongs_to :destination
   validates :user_name, presence: true
   validates :rating, presence: true
   validates_inclusion_of :rating, in: 1..5
