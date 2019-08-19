@@ -10,7 +10,6 @@ class Seed
 
   def self.begin
     Destination.destroy_all
-    Review.destroy_all
     seed = Seed.new
     seed.generate_destinations
   end
