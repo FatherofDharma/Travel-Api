@@ -1,0 +1,13 @@
+{
+  "color": "orange",
+  "notes": {
+    "app": "APP",
+    "db": "DB",
+    "app/views": "VIEWS",
+    "config": "CONFIG",
+    "app/models": "MODELS",
+    "app/controllers": "CONTROLLERS",
+    "spec": "SPEC"
+
+  }
+}
