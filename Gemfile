@@ -51,3 +51,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pivotal_git_scripts'
 gem 'faker'
+gem 'shoulda-matchers'
