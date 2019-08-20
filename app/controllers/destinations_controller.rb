@@ -1,9 +1,15 @@
 class DestinationsController < ApplicationController
 
   def index
-    searched_city = params[:city]
-    if searched_city
-      @destinations = Destination.city(searched_city)
+
+    city = params[:city]
+    country = params[:country]
+    if city && country
+      @destinations = Destination.find_by_city_country(city, country)
+    elsif city
+      @destinations = Destination.find_by_city(city)
+    elsif country
+      @destinations = Destination.find_by_country(country)
     else
       @destinations = Destination.all
     end
