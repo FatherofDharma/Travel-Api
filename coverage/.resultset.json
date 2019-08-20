@@ -272,8 +272,8 @@
         null,
         1,
         1,
-        64,
-        64,
+        65,
+        65,
         null,
         1,
         11,
@@ -354,9 +354,9 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -378,7 +378,7 @@
         null,
         1,
         1,
-        7,
+        8,
         null,
         null,
         null
@@ -634,8 +634,31 @@
         null,
         null,
         null
+      ],
+      "/Users/Guest/Desktop/Travel-Api/spec/requests/put_route_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1566343842
+    "timestamp": 1566344598
   }
 }

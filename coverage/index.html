@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-20T16:30:42-07:00">2019-08-20T16:30:42-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-20T16:43:18-07:00">2019-08-20T16:43:18-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">87.8%</span></span>
+    (<span class="covered_percent"><span class="yellow">89.45%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.81
+         1.8
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>31</b> files in total.
-    <b>246</b> relevant lines. 
-    <span class="green"><b>216</b> lines covered</span> and
-    <span class="red"><b>30</b> lines missed </span>
+    <b>32</b> files in total.
+    <b>256</b> relevant lines. 
+    <span class="green"><b>229</b> lines covered</span> and
+    <span class="red"><b>27</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#b0e589e9451625949548518cd9ed7501dc6b9a54" class="src_link" title="app/controllers/destinations_controller.rb">app/controllers/destinations_controller.rb</a></td>
-        <td class="yellow strong">81.25 %</td>
+        <td class="green strong">90.63 %</td>
         <td>56</td>
         <td>32</td>
-        <td>26</td>
-        <td>6</td>
-        <td>2.0</td>
+        <td>29</td>
+        <td>3</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -297,7 +297,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>16.6</td>
+        <td>16.8</td>
       </tr>
       
       <tr>
@@ -358,6 +358,16 @@
         <td>23</td>
         <td>0</td>
         <td>1.1</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#23d6e4e907621f622092f5d17805334b14877589" class="src_link" title="spec/requests/put_route_spec.rb">spec/requests/put_route_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>21</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
     </tbody>
@@ -666,11 +676,11 @@
         <div class="source_table" id="b0e589e9451625949548518cd9ed7501dc6b9a54">
   <div class="header">
     <h3>app/controllers/destinations_controller.rb</h3>
-    <h4><span class="yellow">81.25 %</span> covered</h4>
+    <h4><span class="green">90.63 %</span> covered</h4>
     <div>
       <b>32</b> relevant lines. 
-      <span class="green"><b>26</b> lines covered</span> and
-      <span class="red"><b>6</b> lines missed.</span>
+      <span class="green"><b>29</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -845,20 +855,20 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
           <code class="ruby">    @destination = Destination.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
           
           <code class="ruby">    if @destination.update!(dest_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
           <code class="ruby">      render status: :ok, json: {</code>
         </li>
@@ -989,8 +999,8 @@
           <code class="ruby">    def dest_params</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="53">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="53">
+          <span class="hits">8</span>
           
           <code class="ruby">      params.permit(:city, :country)</code>
         </li>
@@ -2958,14 +2968,14 @@
           <code class="ruby">  factory :destination do</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="5">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="65" data-linenumber="5">
+          <span class="hits">65</span>
           
           <code class="ruby">    city { &#39;Vancouver&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="64" data-linenumber="6">
-          <span class="hits">64</span>
+        <li class="covered" data-hits="65" data-linenumber="6">
+          <span class="hits">65</span>
           
           <code class="ruby">    country { &#39;USA&#39; }</code>
         </li>
@@ -4390,6 +4400,151 @@
           
           
           <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="23d6e4e907621f622092f5d17805334b14877589">
+  <div class="header">
+    <h3>spec/requests/put_route_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;put destination route&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;will update a destination&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    destination = FactoryBot.create(:destination)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    put &quot;/destinations/#{destination.id}&quot;, params: {:city =&gt; &#39;seattle&#39;, :country =&gt; &quot;turkey&quot;}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    # binding.pry</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(JSON.parse(response.body)[&quot;message&quot;]).to eq(&quot;This destination has been updated successfully!&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(response).to have_http_status(:success)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    updated_destination = Destination.find(destination.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(updated_destination.country).to eq(&quot;turkey&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(updated_destination.city).to eq(&quot;seattle&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"># it &#39;returns a destination with id&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">#   destination = FactoryBot.create(:destination)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">#   get &quot;/destinations/#{destination.id}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">#   expect(JSON.parse(response.body)[&quot;id&quot;]).to eq(destination.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"># end</code>
         </li>
       
     </ol>
