@@ -21,9 +21,15 @@ class ReviewsController < ApplicationController
   def update
     @destination = Destination.find(params[:destination_id])
     @review = @destination.reviews.find(params[:id])
-    if @review.update!(review_params)
+    if params[:user_name] == @review.user_name
+      if @review.update!(review_params)
+        render status: :ok, json: {
+          message: "This review has been successfully updated!"
+        }
+      end
+    else
       render status: :ok, json: {
-        message: "This review has been successfully updated!"
+        message: "You do not have permission to edit this review!"
       }
     end
   end
@@ -31,9 +37,15 @@ class ReviewsController < ApplicationController
   def destroy
     @destination = Destination.find(params[:destination_id])
     @review = @destination.reviews.find(params[:id])
-    if @review.destroy!
+    if params[:user_name] == @review.user_name
+      if @review.destroy!
+        render status: :ok, json: {
+          message: "This review has been successfully destroyed!"
+        }
+      end
+    else
       render status: :ok, json: {
-        message: "This review has been successfully destroyed!"
+        message: "You do not have permission to delete this review!"
       }
     end
   end

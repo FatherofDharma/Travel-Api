@@ -1,7 +1,6 @@
 class DestinationsController < ApplicationController
 
   def index
-
     city = params[:city]
     country = params[:country]
     if city && country
