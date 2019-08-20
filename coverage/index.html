@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-20T16:15:34-07:00">2019-08-20T16:15:34-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-08-20T16:30:42-07:00">2019-08-20T16:30:42-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">85.65%</span></span>
+    (<span class="covered_percent"><span class="yellow">87.8%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.75
+         1.81
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>31</b> files in total.
-    <b>230</b> relevant lines. 
-    <span class="green"><b>197</b> lines covered</span> and
-    <span class="red"><b>33</b> lines missed </span>
+    <b>246</b> relevant lines. 
+    <span class="green"><b>216</b> lines covered</span> and
+    <span class="red"><b>30</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -97,17 +97,17 @@
         <td>3</td>
         <td>3</td>
         <td>0</td>
-        <td>4.7</td>
+        <td>5.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#b0e589e9451625949548518cd9ed7501dc6b9a54" class="src_link" title="app/controllers/destinations_controller.rb">app/controllers/destinations_controller.rb</a></td>
-        <td class="red strong">71.88 %</td>
+        <td class="yellow strong">81.25 %</td>
         <td>56</td>
         <td>32</td>
-        <td>23</td>
-        <td>9</td>
-        <td>1.4</td>
+        <td>26</td>
+        <td>6</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -157,7 +157,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -297,7 +297,7 @@
         <td>10</td>
         <td>10</td>
         <td>0</td>
-        <td>16.2</td>
+        <td>16.6</td>
       </tr>
       
       <tr>
@@ -333,11 +333,11 @@
       <tr>
         <td class="strong"><a href="#571d03ea1ffdc700dc1396163ea5f8e4ec3e677a" class="src_link" title="spec/requests/get_destinations_spec.rb">spec/requests/get_destinations_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>24</td>
-        <td>24</td>
+        <td>68</td>
+        <td>40</td>
+        <td>40</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -640,8 +640,8 @@
           <code class="ruby">  def json_response(object, status = :ok)</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="3">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="15" data-linenumber="3">
+          <span class="hits">15</span>
           
           <code class="ruby">    render json: object, status: status</code>
         </li>
@@ -666,11 +666,11 @@
         <div class="source_table" id="b0e589e9451625949548518cd9ed7501dc6b9a54">
   <div class="header">
     <h3>app/controllers/destinations_controller.rb</h3>
-    <h4><span class="red">71.88 %</span> covered</h4>
+    <h4><span class="yellow">81.25 %</span> covered</h4>
     <div>
       <b>32</b> relevant lines. 
-      <span class="green"><b>23</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -695,50 +695,50 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
           
           <code class="ruby">    city = params[:city]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    country = params[:country]</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="6">
+          <span class="hits">5</span>
           
           <code class="ruby">    if city &amp;&amp; country</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">      @destinations = Destination.find_by_city_country(city, country)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="8">
+          <span class="hits">4</span>
           
           <code class="ruby">    elsif city</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">      @destinations = Destination.find_by_city(city)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">    elsif country</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">      @destinations = Destination.find_by_country(country)</code>
         </li>
@@ -761,8 +761,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="15">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
           <code class="ruby">    json_response(@destinations)</code>
         </li>
@@ -1540,8 +1540,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">  scope :find_by_city, -&gt; (city) { where(&quot;city ILIKE ?&quot;, &quot;%#{city}%&quot;)}</code>
         </li>
@@ -1558,8 +1558,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">  scope :find_by_country, -&gt; (country) { where(&quot;country ILIKE ?&quot;, &quot;%#{country}%&quot;)}</code>
         </li>
@@ -1570,8 +1570,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">  scope :find_by_city_country, -&gt; (city, country) { where(&quot;city ILIKE ? AND country ILIKE ?&quot;, &quot;%#{city}%&quot;, &quot;%#{country}%&quot;)}</code>
         </li>
@@ -2958,14 +2958,14 @@
           <code class="ruby">  factory :destination do</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="5">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="64" data-linenumber="5">
+          <span class="hits">64</span>
           
           <code class="ruby">    city { &#39;Vancouver&#39; }</code>
         </li>
       
-        <li class="covered" data-hits="62" data-linenumber="6">
-          <span class="hits">62</span>
+        <li class="covered" data-hits="64" data-linenumber="6">
+          <span class="hits">64</span>
           
           <code class="ruby">    country { &#39;USA&#39; }</code>
         </li>
@@ -3661,8 +3661,8 @@
     <h3>spec/requests/get_destinations_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>24</b> relevant lines. 
-      <span class="green"><b>24</b> lines covered</span> and
+      <b>40</b> relevant lines. 
+      <span class="green"><b>40</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3856,40 +3856,40 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">end</code>
+          <code class="ruby">  it &#39;returns a destination with the given city&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    FactoryBot.create(:destination, :city =&gt; &quot;seattle&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
-          <code class="ruby">describe &quot;get most reviewed destinations route&quot;, :type =&gt; :request do</code>
+          <code class="ruby">    destination2 = FactoryBot.create(:destination, :city =&gt; &quot;portland&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  # let!(:destinations) { FactoryBot.create_list(:destination, 20)}</code>
+          <code class="ruby">    get &quot;/destinations&quot;, params: { :city =&gt; &quot;portland&quot; }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    expect(JSON.parse(response.body)[0][&quot;city&quot;]).to eq(destination2.city)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  # FactoryBot.c reate(:review, destination_id: destination1.id)</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
@@ -3901,46 +3901,178 @@
         <li class="covered" data-hits="1" data-linenumber="39">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &#39;returns most reviewed destinations in descending order&#39; do</code>
+          <code class="ruby">  it &#39;returns a destination with the given country&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">    destinations = FactoryBot.create_list(:destination, 20)</code>
+          <code class="ruby">    FactoryBot.create(:destination, :country =&gt; &quot;Turkey&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    destination0 = destinations[0]</code>
+          <code class="ruby">    destination2 = FactoryBot.create(:destination, :country =&gt; &quot;USA&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">    FactoryBot.create_list(:review, 10, destination: destination0)</code>
+          <code class="ruby">    get &quot;/destinations&quot;, params: { :country =&gt; &quot;USA&quot; }</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">    get &#39;/most_reviewed_destinations&#39;</code>
+          <code class="ruby">    expect(JSON.parse(response.body)[0][&quot;country&quot;]).to eq(destination2.country)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    expect(JSON.parse(response.body)[0][&quot;id&quot;]).to eq(destination0.id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;returns a destination with the given city and country&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    FactoryBot.create(:destination, :city =&gt; &quot;metropolis&quot;, :country =&gt; &quot;Turkey&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    destination2 = FactoryBot.create(:destination, :city =&gt; &quot;metropolis&quot;, :country =&gt; &quot;USA&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    get &quot;/destinations&quot;, params: { :city =&gt; &quot;metropolis&quot;, :country =&gt; &quot;USA&quot; }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(JSON.parse(response.body)[0][&quot;country&quot;]).to eq(destination2.country)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(JSON.parse(response.body)[0][&quot;city&quot;]).to eq(destination2.city)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;get most reviewed destinations route&quot;, :type =&gt; :request do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  # let!(:destinations) { FactoryBot.create_list(:destination, 20)}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby">  # FactoryBot.c reate(:review, destination_id: destination1.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;returns most reviewed destinations in descending order&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    destinations = FactoryBot.create_list(:destination, 20)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    destination0 = destinations[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    FactoryBot.create_list(:review, 10, destination: destination0)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    get &#39;/most_reviewed_destinations&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(JSON.parse(response.body)[0][&quot;id&quot;]).to eq(destination0.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby">end</code>

@@ -29,6 +29,28 @@ describe "get specific destination by id route", :type => :request do
     expect(JSON.parse(response.body)["id"]).to eq(destination.id)
   end
 
+  it 'returns a destination with the given city' do
+    FactoryBot.create(:destination, :city => "seattle")
+    destination2 = FactoryBot.create(:destination, :city => "portland")
+    get "/destinations", params: { :city => "portland" }
+    expect(JSON.parse(response.body)[0]["city"]).to eq(destination2.city)
+  end
+
+  it 'returns a destination with the given country' do
+    FactoryBot.create(:destination, :country => "Turkey")
+    destination2 = FactoryBot.create(:destination, :country => "USA")
+    get "/destinations", params: { :country => "USA" }
+    expect(JSON.parse(response.body)[0]["country"]).to eq(destination2.country)
+  end
+
+  it 'returns a destination with the given city and country' do
+    FactoryBot.create(:destination, :city => "metropolis", :country => "Turkey")
+    destination2 = FactoryBot.create(:destination, :city => "metropolis", :country => "USA")
+    get "/destinations", params: { :city => "metropolis", :country => "USA" }
+    expect(JSON.parse(response.body)[0]["country"]).to eq(destination2.country)
+    expect(JSON.parse(response.body)[0]["city"]).to eq(destination2.city)
+  end
+
 end
 
 describe "get most reviewed destinations route", :type => :request do
