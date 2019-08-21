@@ -8,7 +8,7 @@
     "app/models": "MODELS",
     "app/controllers": "CONTROLLERS",
     "spec": "SPEC",
-    "db/seeds.rb": "SEEDS"
-
+    "db/seeds.rb": "SEEDS",
+    "spec/models": "MODELS-SPEC"
   }
 }
