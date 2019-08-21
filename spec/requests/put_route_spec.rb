@@ -4,7 +4,7 @@ describe "put destination route" do
 
   it 'will update a destination' do
     destination = FactoryBot.create(:destination)
-    put "/destinations/#{destination.id}", params: {:city => 'seattle', :country => "turkey"}
+    put "/v1/destinations/#{destination.id}", params: {:city => 'seattle', :country => "turkey"}
     # binding.pry
     expect(JSON.parse(response.body)["message"]).to eq("This destination has been updated successfully!")
     expect(response).to have_http_status(:success)

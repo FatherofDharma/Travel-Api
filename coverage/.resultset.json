@@ -325,7 +325,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/Travel-Api/app/controllers/destinations_controller.rb": [
+      "/Users/Guest/Desktop/Travel-Api/app/controllers/v1/destinations_controller.rb": [
         1,
         null,
         1,
@@ -383,7 +383,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/Travel-Api/app/controllers/reviews_controller.rb": [
+      "/Users/Guest/Desktop/Travel-Api/app/controllers/v1/reviews_controller.rb": [
         1,
         null,
         1,
@@ -492,10 +492,16 @@
       "/Users/Guest/Desktop/Travel-Api/config/routes.rb": [
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
         1,
         null,
         null,
-        1,
         null
       ],
       "/Users/Guest/Desktop/Travel-Api/spec/models/review_spec.rb": [
@@ -659,6 +665,6 @@
         null
       ]
     },
-    "timestamp": 1566400986
+    "timestamp": 1566413906
   }
 }

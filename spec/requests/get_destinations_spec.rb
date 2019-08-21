@@ -4,7 +4,7 @@ describe "get all destinations route", :type => :request do
   Destination.destroy_all
   let!(:destinations) { FactoryBot.create_list(:destination, 20) }
 
-  before { get '/destinations' }
+  before { get '/v1/destinations' }
 
   it 'returns all destinations' do
     expect(JSON.parse(response.body).size).to eq(20)
@@ -19,34 +19,34 @@ end
 describe "get specific destination by id route", :type => :request do
 
   it 'returns an error message for invalid id' do
-    get '/destinations/0'
+    get '/v1/destinations/0'
     expect(JSON.parse(response.body)['message']).to eq("Couldn't find Destination with 'id'=0")
   end
 
   it 'returns a destination with id' do
     destination = FactoryBot.create(:destination)
-    get "/destinations/#{destination.id}"
+    get "/v1/destinations/#{destination.id}"
     expect(JSON.parse(response.body)["id"]).to eq(destination.id)
   end
 
   it 'returns a destination with the given city' do
     FactoryBot.create(:destination, :city => "seattle")
     destination2 = FactoryBot.create(:destination, :city => "portland")
-    get "/destinations", params: { :city => "portland" }
+    get "/v1/destinations", params: { :city => "portland" }
     expect(JSON.parse(response.body)[0]["city"]).to eq(destination2.city)
   end
 
   it 'returns a destination with the given country' do
     FactoryBot.create(:destination, :country => "Turkey")
     destination2 = FactoryBot.create(:destination, :country => "USA")
-    get "/destinations", params: { :country => "USA" }
+    get "/v1/destinations", params: { :country => "USA" }
     expect(JSON.parse(response.body)[0]["country"]).to eq(destination2.country)
   end
 
   it 'returns a destination with the given city and country' do
     FactoryBot.create(:destination, :city => "metropolis", :country => "Turkey")
     destination2 = FactoryBot.create(:destination, :city => "metropolis", :country => "USA")
-    get "/destinations", params: { :city => "metropolis", :country => "USA" }
+    get "/v1/destinations", params: { :city => "metropolis", :country => "USA" }
     expect(JSON.parse(response.body)[0]["country"]).to eq(destination2.country)
     expect(JSON.parse(response.body)[0]["city"]).to eq(destination2.city)
   end
