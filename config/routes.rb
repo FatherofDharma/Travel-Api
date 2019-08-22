@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'authenticate', to: 'authentication#authenticate'
   get '/most_reviewed_destinations/', to: 'v1/destinations#most_reviewed'
 
   # namespace: v2 do
